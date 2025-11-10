@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "message": "Content is not HTML, skipping asset/metadata extraction.",
+  "headers": {
+    "cf-cache-status": "MISS",
+    "cf-ray": "99c25651d4798989-SIN",
+    "connection": "keep-alive",
+    "content-type": "text/javascript",
+    "date": "Mon, 10 Nov 2025 03:07:01 GMT",
+    "etag": "W/\"e99-60a191ccde15b-gzip\"",
+    "last-modified": "Tue, 14 Nov 2023 09:07:13 GMT",
+    "server": "cloudflare",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding"
+  },
+  "sourceCode": "(function($) {\n  'use strict';\n  $(function() {\n    var body = $('body');\n    var contentWrapper = $('.content-wrapper');\n    var scroller = $('.container-scroller');\n    var footer = $('.footer');\n    var sidebar = $('.sidebar');\n\n    //Add active class to nav-link based on url dynamically\n    //Active class can be hard coded directly in html file also as required\n\n    function addActiveClass(element) {\n      if (current === \"\") {\n        //for root url\n        if (element.attr('href').indexOf(\"index.html\") !== -1) {\n          element.parents('.nav-item').last().addClass('active');\n          if (element.parents('.sub-menu').length) {\n            element.closest('.collapse').addClass('show');\n            element.addClass('active');\n          }\n        }\n      } else {\n        //for other url\n        if (element.attr('href').indexOf(current) !== -1) {\n          element.parents('.nav-item').last().addClass('active');\n          if (element.parents('.sub-menu').length) {\n            element.closest('.collapse').addClass('show');\n            element.addClass('active');\n          }\n          if (element.parents('.submenu-item').length) {\n            element.addClass('active');\n          }\n        }\n      }\n    }\n\n    var current = location.pathname.split(\"/\").slice(-1)[0].replace(/^\\/|\\/$/g, '');\n    $('.nav li a', sidebar).each(function() {\n      var $this = $(this);\n      addActiveClass($this);\n    })\n\n    $('.horizontal-menu .nav li a').each(function() {\n      var $this = $(this);\n      addActiveClass($this);\n    })\n\n    //Close other submenu in sidebar on opening any\n\n    sidebar.on('show.bs.collapse', '.collapse', function() {\n      sidebar.find('.collapse.show').collapse('hide');\n    });\n\n\n    //Change sidebar and content-wrapper height\n    // applyStyles();\n\n    function applyStyles() {\n      //Applying perfect scrollbar\n      if (!body.hasClass(\"rtl\")) {\n        if ($('.settings-panel .tab-content .tab-pane.scroll-wrapper').length) {\n          const settingsPanelScroll = new PerfectScrollbar('.settings-panel .tab-content .tab-pane.scroll-wrapper');\n        }\n        if ($('.chats').length) {\n          const chatsScroll = new PerfectScrollbar('.chats');\n        }\n        if (body.hasClass(\"sidebar-fixed\")) {\n          if($('#sidebar').length) {\n            var fixedSidebarScroll = new PerfectScrollbar('#sidebar .nav');\n          }\n        }\n      }\n    }\n\n    $('[data-toggle=\"minimize\"]').on(\"click\", function() {\n      if ((body.hasClass('sidebar-toggle-display')) || (body.hasClass('sidebar-absolute'))) {\n        body.toggleClass('sidebar-hidden');\n      } else {\n        body.toggleClass('sidebar-icon-only');\n      }\n    });\n\n    //checkbox and radios\n    $(\".form-check label,.form-radio label\").append('<i class=\"input-helper\"></i>');\n\n    //Horizontal menu in mobile\n    $('[data-toggle=\"horizontal-menu-toggle\"]').on(\"click\", function() {\n      $(\".horizontal-menu .bottom-navbar\").toggleClass(\"header-toggled\");\n    });\n    // Horizontal menu navigation in mobile menu on click\n    var navItemClicked = $('.horizontal-menu .page-navigation >.nav-item');\n    navItemClicked.on(\"click\", function(event) {\n      if(window.matchMedia('(max-width: 991px)').matches) {\n        if(!($(this).hasClass('show-submenu'))) {\n          navItemClicked.removeClass('show-submenu');\n        }\n        $(this).toggleClass('show-submenu');\n      }\n    })\n\n    $(window).scroll(function() {\n      if(window.matchMedia('(min-width: 992px)').matches) {\n        var header = $('.horizontal-menu');\n        if ($(window).scrollTop() >= 70) {\n          $(header).addClass('fixed-on-scroll');\n        } else {\n          $(header).removeClass('fixed-on-scroll');\n        }\n      }\n    });\n\n\n  });\n})(jQuery);\n",
+  "assets": {},
+  "metadata": {},
+  "requestedUrl": "https://ecitizen.kp.gov.pk/theme/js/template.js",
+  "correctedUrl": "https://ecitizen.kp.gov.pk/theme/js/template.js",
+  "finalUrl": "https://ecitizen.kp.gov.pk/theme/js/template.js",
+  "status": 200,
+  "statusText": "OK"
+}
