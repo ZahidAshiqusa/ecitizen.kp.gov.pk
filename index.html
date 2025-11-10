@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zahid Hussain Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Gochi+Hand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(180deg, #020b1f 0%, #0a0a0a 100%);
+      color: #cceaff;
+      padding: 30px 10px;
+    }
+    @keyframes borderColorShift {
+      0% { border-color: #00fff2; }
+      25% { border-color: #00ff6a; }
+      50% { border-color: #ff00d4; }
+      75% { border-color: #ffae00; }
+      100% { border-color: #00fff2; }
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .frame {
+      margin: 0 auto 20px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      padding: 6px;
+      border: 3px solid #00fff2;
+      animation: borderColorShift 5s linear infinite;
+    }
+    .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    h1, h2, h3 {
+      text-shadow: 0 0 10px #0ff, 0 0 20px #00f5ff;
+      margin: 10px 0;
+    }
+    p, li {
+      color: #a0cfd9;
+    }
+    section {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+      border: 2px solid #00fff2;
+      animation: borderColorShift 5s linear infinite;
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .highlight {
+      color: #00f5ff;
+      font-weight: bold;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 60px auto;
+      flex-wrap: wrap;
+    }
+    .container-button {
+      position: relative;
+      perspective: 800px;
+      width: 135px;
+      height: 47px;
+      transition: transform 0.3s;
+    }
+    .container-button:hover {
+      transform: scale(1.05);
+    }
+    .container-button button {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      font-size: 17px;
+      font-weight: 900;
+      border: 3px solid #f39923;
+      border-radius: 12px;
+      color: #fff;
+    }
+    .container-button button::before {
+      content: "";
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%; height: 100%;
+      background-color: #f5ae51;
+      border-radius: 12px;
+      z-index: -1;
+      transition: background 0.3s;
+    }
+    .container-button button:hover::before {
+      background-color: #f19c2b;
+    }
+    @media (max-width: 600px) {
+      .btn-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    .contacts a {
+      margin: 0 10px;
+      color: #cceaff;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+    .contacts a:hover {
+      color: #00f5ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="frame section">
+      <img src="https://od.lk/s/MzhfMzA0MzE2ODRf/square-1-1-1750418640771.jpeg" alt="Zahid Hussain profile picture" />
+    </div>
+
+    <h1>ZAHID HUSSAIN</h1>
+    <h3>SON OF MUHAMMAD ASHIQ</h3>
+    <p>CHAA BOOTEWALA, SHAILI GHARBI, TEHSIL CHISHTIAN, DISTRICT BAHAWALNAGAR</p>
+    <h2 class="highlight">COMPUTER EXPERT & PROGRAMMER</h2>
+
+    <section class="section">
+      <h2>SUMMARY</h2>
+      <p>Punctual, goal‑oriented, highly motivated with strong communication, creative mindset and technical/design skills.</p>
+    </section>
+
+    <section class="section">
+      <h2>QUALIFICATION</h2>
+      <ul>
+        <li><strong>MATRIC:</strong> Govt High School No.2 Hasilpur Old</li>
+        <li><strong>INTER:</strong> City College Hasilpur City</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>EXPERIENCE</h2>
+      <ul>
+        <li>13 Years of Computer Experience</li>
+        <li>Web UI Designing</li>
+        <li>Graphics Designing</li>
+        <li>AI Integration</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>SKILLS</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>UI/UX Design, Figma, Photoshop</li>
+        <li>Python & AI Tools</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>HOBBIES</h2>
+      <ul>
+        <li>Artistic Activities</li>
+        <li>Graphics & UI Design</li>
+        <li>Reading, Writing</li>
+        <li>Learning Tech</li>
+        <li>Community Participation</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Currently Pursuing</h2>
+      <ul>
+        <li>B.Sc Studies</li>
+        <li>Hifz‑e‑Quran</li>
+        <li>Continuous Learning</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>LANGUAGES</h2>
+      <ul>
+        <li><strong>Punjabi:</strong> Proficient</li>
+        <li><strong>English:</strong> Fluent</li>
+        <li><strong>Urdu:</strong> Native</li>
+        <li><strong>Arabic:</strong> Intermediate</li>
+      </ul>
+    </section>
+
+    <section class="section contacts">
+      <h2>CONTACTS</h2>
+      <p>
+        <a href="mailto:zaidashiqusa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a <a href="tel:03299931199">
+  <i class="fas fa-phone-alt"></i>
+</a>
+<a href="https://wa.me/254114935564" target="_blank">
+  <i class="fab fa-whatsapp"></i> 
+</a>
+      </p>
+    </section>
+
+    <div class="btn-container">
+      <div class="container-button">
+        <button id="btnQualified" aria-label="Qualified">Qualified</button>
+      </div>
+      <div class="container-button">
+        <button id="btnUnqualified" aria-label="Unqualified">Unqualified</button>
+      </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="welcomeAudio" src="welcome-siound.mp3" preload="auto"></audio>
+    <audio id="qualifiedSound" src="qualified-sound.mp3" preload="auto"></audio>
+    <audio id="unqualifiedSound" src="unqualified-sound.mp3" preload="auto"></audio>
+
+  </div>
+
+  <script>
+    // Reveal animation
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => e.isIntersecting && e.target.classList.add('show'));
+    }, { threshold: 0.1 });
+    sections.forEach(s => observer.observe(s));
+
+    // Welcome audio play on click
+    let welcomePlayed = false;
+    document.body.addEventListener('click', () => {
+      if (!welcomePlayed) {
+        welcomePlayed = true;
+        document.getElementById('welcomeAudio').play().catch(() => {});
+      }
+    });
+
+    // Dynamic job/company - customise here
+    const job = "👉YOUR_POST👈";
+    const company = "👉OUR_COMPANY👈";
+    const phone = "923299931199"; // no + sign
+
+    function sendWhatsApp(qualified) {
+      const soundId = qualified ? "qualifiedSound" : "unqualifiedSound";
+      const message = qualified
+        ? `We are pleased to announce that you are qualified for the job of ${job} at ${company}.`
+        : "We are sorry but you are unqualified for our company.";
+      document.getElementById(soundId).play().catch(() => {});
+      setTimeout(() => {
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+      }, 1000);
+    }
+
+    document.getElementById('btnQualified').addEventListener('click', () => sendWhatsApp(true));
+    document.getElementById('btnUnqualified').addEventListener('click', () => sendWhatsApp(false));
+  </script>
+</body>
+</html>
