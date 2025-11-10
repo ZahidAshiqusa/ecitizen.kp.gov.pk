@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "message": "Content is not HTML, skipping asset/metadata extraction.",
+  "headers": {
+    "cf-cache-status": "MISS",
+    "cf-ray": "99c25651d214d969-SIN",
+    "connection": "keep-alive",
+    "content-type": "text/css",
+    "date": "Mon, 10 Nov 2025 03:07:01 GMT",
+    "etag": "W/\"eec-611cb1bf971f8-gzip\"",
+    "last-modified": "Tue, 20 Feb 2024 07:25:05 GMT",
+    "server": "cloudflare",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding"
+  },
+  "sourceCode": "\n.content-wrapper{\n    margin-bottom: 3rem;\n}\n\n.footer{\n    position: fixed;\n    bottom: 0px;\n    width: 100%;\n    padding: 0px;\n    margin: 0px;\n}\n\n.horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand img{\n    height: 54px;\n}\n\n.horizontal-menu .bottom-navbar .page-navigation{\n    justify-content: normal;\n}\n\n\n.selectize-input{\n    padding-top:12px;\n    padding-bottom:12px;\n}\n.selectize-dropdown{\n    padding: 0;\n}\n\n.form-control:focus,\n.typeahead:focus,\n.tt-query:focus,\n.tt-hint:focus{\n    border-color: #0ddbb9;\n}\n\n.selectize-dropdown [data-selectable].option{\n    padding: 12px 6px;\n}\n\n.selectize-dropdown .selected{\n    background-color: #0ddbb9;\n}\n\n\n.chosen-container{\n    width: 100% !important;\n    height: 42px !important;\n}\n.chosen-container .chosen-single{\n    border-radius: 0px;\n    line-height: 42px !important;\n    height: 44px !important;\n}\n\n.chosen-container-single .chosen-single div b{\n    background-position-y: 12px;\n}\n\n.fw-600{\n    font-weight: 600 !important;\n}\n\n.custom-footer{\n    justify-content: space-between;\n}\n@media (max-width: 991px) {\n    .horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand,\n    .horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini img {\n        width: unset;\n    }\n    /*.horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini img {\n        position: relative;\n        left: 40px;\n    }*/\n}\n\n@media only screen and (min-width: 768px) and (max-width: 991px) {\n    .container-fluid.page-body-wrapper{\n        margin-top: 10rem !important;\n    }\n}\n\n@media only screen and (max-width: 768px) {\n    .tooltip {\n        display: none !important;\n    }\n    .content-wrapper{\n        margin-bottom: 8rem;\n    }\n    #loginModal .auth-form-light{\n        padding: 0px !important;\n    }\n    .card-container{\n        opacity: unset !important;\n    }\n}\n\n select.chosen{\n    line-height: 29px;\n    border: 1px solid #ccc;\n }\n\n\ntable td .btn.btn-social-icon{\n    height: 42px;\n}\n.border-success{\n    border: 1px solid;\n    border-radius: 5px;\n    border-color: #0ddbb9;\n}\n.border-danger{\n    border: 1px solid;\n    border-radius: 5px;\n    border-color: red;\n}\n\n.border-info{\n    border: 1px solid;\n    border-radius: 5px;\n    border-color: #0ad7f7;\n}\n\n.card-counter{\n    position: absolute;\n    right: 2%;\n    top: 33%;\n    font-size: 3rem;\n    color: rgba(0,0,0,0.1);\n    width: 80px;\n    text-align: center;\n}\n\n.card-container{\n    min-height: 260px;\n    opacity: 0.7;\n    transition: 200ms ease-in-out;\n}\n\n.card-container:hover{\n    opacity: 1;\n}\n\n.form-loader{\n    width: 200px;\n    position: fixed;\n    z-index: 2;\n    display: flex;\n    justify-content: center;\n    left: 40%;\n    top: 35%;\n    background: rgba(255,255,255,0.9);\n    border: 2px solid #cecece;\n    border-radius: 15px;\n    flex-direction: column;\n    text-align: center;\n    align-items: center;\n}\n\n\n@media only screen and (min-width: 768px) and (max-width: 991px){\n    .container-fluid.page-body-wrapper{\n        margin-top: 5rem !important;\n    }\n}\n\n@media only screen and (max-width: 460px) {\n    .card-container{\n        opacity: 1;\n    }\n\n    .horizontal-menu .top-navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile.dropdown .navbar-dropdown{\n        position: absolute;\n        font-size: 0.9rem;\n        margin-top: 0;\n        right: 0;\n        left: auto;\n        top: 5rem;\n        width: 100%;\n    }\n\n    .form-loader{\n        left: 30%;\n    }\n}\n\n\n.select2-container--default .select2-selection--single{\n    border-radius: unset;\n}\n\n.select2-container .select2-selection--single{\n    height: 44px;\n}\n\n.select2-container--default .select2-selection--single .select2-selection__rendered{\n    line-height: 40px;\n}\n\n.select2-container--default .select2-selection--single .select2-selection__arrow{\n    top: 10px;\n}\n",
+  "assets": {},
+  "metadata": {},
+  "requestedUrl": "https://ecitizen.kp.gov.pk/css/dastak.css",
+  "correctedUrl": "https://ecitizen.kp.gov.pk/css/dastak.css",
+  "finalUrl": "https://ecitizen.kp.gov.pk/css/dastak.css",
+  "status": 200,
+  "statusText": "OK"
+}
