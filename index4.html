@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="ZzDq9KGbt2f2z2klGflh8P0WmTY9TG94t3PXdxYY">
+    <meta name="api-token" content="1_eyJpdiI6ImxQM2R0UnAwQmIrOWN6VFBDcldncVE9PSIsInZhbHVlIjoiUU94RzdnVGhEemFYTVJobm1kMjZCUlhyV285Z0NKNTlSRTRtUzk4WDMxRT0iLCJtYWMiOiJkOWFkMDE0ZjY4M2U2NTY1YTQzZWE4NWU4MmEyMWRkMmRjN2YxMGQ0ZjQzODQ5NDllMmQxOGFiMzQ3MDZjNDRlIiwidGFnIjoiIn0=">
+    <title>Dastak - Citizens platform</title>
+
+    <meta name="google" value="notranslate">
+
+    <!-- PWA  -->
+    <meta name="theme-color" content="#6777ef" />
+    <link rel="apple-touch-icon" href="https://ecitizen.kp.gov.pk/logo.png">
+    <link rel="manifest" href="https://ecitizen.kp.gov.pk/manifest.json">
+
+    <!-- base:css -->
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/base/vendor.bundle.base.css">
+    <!-- endinject -->
+
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/selectize/selectize.default.min.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/jquery-toast/jquery.toast.min.css">
+    <!-- End plugin css for this page -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/css/style.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/css/dastak.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="https://ecitizen.kp.gov.pk/images/favicon.ico" />
+
+        <style>
+        .login-details {
+            background: white;
+        }
+
+        .login-details .caption {
+            position: relative;
+            top: -34px;
+            width: 6rem;
+            margin: 0 auto;
+            padding: 6px;
+            background: white;
+            text-align: center;
+            font-size: 16px;
+            height: 32px;
+        }
+
+        .login-details button {
+            min-width: 160px;
+        }
+        .form-check .form-check-label input[type="radio"] + .input-helper:before{
+            border-color: #0ddbb9;
+        }
+    </style>
+    <style>
+        .search-container {
+            position: relative;
+        }
+
+        .search-container input[type="text"] {
+            border-radius: 2rem;
+            border-color: #a7afb7;
+        }
+
+        .search-container select {
+            border-radius: 2rem;
+            border-color: #a7afb7;
+        }
+
+        .search-container button[type="submit"] {
+            /* position: absolute;
+            top: 7px;
+            right: 8px; */
+            border: unset;
+            box-shadow: unset;
+            line-height: 20px;
+        }
+
+        .search-container .console {
+            font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+        }
+
+        .search-container #animate_text {
+            display: none
+        }
+
+        .search-container select {
+            border-radius: 2rem;
+            border-color: #a7afb7;
+            height: 45px;
+            padding: 0 1rem;
+            appearance: none;         /* remove default browser arrow */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #fff;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 30px 30px;   /* arrow size */
+            cursor: pointer;
+            }
+
+
+            /* Style the dropdown options */
+            .search-container select option {
+            padding: 10px;
+            border-radius: 6px;
+            }
+
+            /* Optional: Better hover effect for options (works in most browsers except Safari) */
+            .search-container select option:hover {
+            background-color: #f1f1f1;
+            }
+
+
+
+        .search-container #cursor {
+            line-height: 20px;
+            font-size: 20px;
+            margin-left: 3px;
+        }
+    </style>
+    <style>
+        .search-container {
+            position: relative;
+        }
+
+        .search-container input[type="text"] {
+            border-radius: 2rem;
+            border-color: #a7afb7;
+        }
+
+        .search-container select {
+            border-radius: 2rem;
+            border-color: #a7afb7;
+        }
+
+        .search-container button[type="submit"] {
+            /* position: absolute;
+            top: 7px;
+            right: 8px; */
+            border: unset;
+            box-shadow: unset;
+            line-height: 20px;
+        }
+
+        .search-container .console {
+            font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+        }
+
+        .search-container #animate_text {
+            display: none
+        }
+
+        .search-container select {
+            border-radius: 2rem;
+            border-color: #a7afb7;
+            height: 45px;
+            padding: 0 1rem;
+            appearance: none;         /* remove default browser arrow */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #fff;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 30px 30px;   /* arrow size */
+            cursor: pointer;
+            }
+
+
+            /* Style the dropdown options */
+            .search-container select option {
+            padding: 10px;
+            border-radius: 6px;
+            }
+
+            /* Optional: Better hover effect for options (works in most browsers except Safari) */
+            .search-container select option:hover {
+            background-color: #f1f1f1;
+            }
+
+
+
+        .search-container #cursor {
+            line-height: 20px;
+            font-size: 20px;
+            margin-left: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-scroller">
+
+        <!-- partial:partials/_horizontal-navbar.html -->
+        <div class="horizontal-menu">
+            <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+                <div class="container-fluid">
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
+                        <ul class="navbar-nav navbar-nav-left">
+                            <li class="nav-item ms-0 me-5 d-lg-flex d-none">
+                                <a href="#" class="nav-link horizontal-nav-left-menu">
+                                    <img src="https://ecitizen.kp.gov.pk/images/kp-logo.png" alt="KP Logo" height="64" />
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown d-none">
+                                <a href="#" class="nav-link count-indicator "><i
+                                        class="mdi mdi-message-reply-text"></i></a>
+                            </li>
+                                                    </ul>
+                        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                            <a class="navbar-brand brand-logo" href="/">
+                                <img src="https://ecitizen.kp.gov.pk/images/logo-dastak.png" alt="logo" />
+                            </a>
+                            <a class="navbar-brand brand-logo-mini" href="/">
+                                <img src="https://ecitizen.kp.gov.pk/images/logo-dastak.png" alt="logo" /></a>
+                        </div>
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item nav-profile">
+                                                                
+                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper pb-1 pt-3">
+                    <div class="row">
+                        <div class="col-sm-6 mb-4 mb-xl-0">
+                            <div class="d-lg-flex align-items-center">
+                                <div>
+                                    <h3 class="text-dark font-weight-bold mb-2">Welcome! We're delighted to have you here!</h3>
+                                    <h5 class="font-weight-normal mb-2">
+                                        You are one step close to digital platform.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center justify-content-md-end">
+                                <div class="pe-1 mb-3 mb-xl-0">
+                                    <button type="button" class="btn btn-outline-inverse-info btn-icon-text">
+                                        Feedback
+                                        <i class="mdi mdi-message-outline btn-icon-append"></i>
+                                    </button>
+                                </div>
+                                <div class="pe-1 mb-3 mb-xl-0">
+                                    <button type="button" class="btn btn-outline-inverse-info btn-icon-text">
+                                        Help
+                                        <i class="mdi mdi-help-circle-outline btn-icon-append"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="row mt-2">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <form name="search-application-license" action="" method="GET">
+                            <div class="search-container position-relative">
+    <span class="animate_text d-none">Track License by License #</span>
+    <span class="caption" style="position:absolute; left:24px; top:13px; pointer-events:none;"></span>
+
+    <h2 class="fw-bold mb-3 text-center">Verify Your License</h2>
+    <div class="row">
+                    <div class="col-md-4 mt-2">
+                <select name="license_type" id="licenseType" class="form-control border-success" required>
+                    <option value="arms_license" selected>Arms License</option>
+                    <option value="arms_business_license">Arms Business License</option>
+                </select>
+            </div>
+            <div class="col-md-4 mt-2">
+                <input
+                    type="text"
+                    value=""
+                    maxlength="30"
+                    name="tracking_id"
+                    class="form-control border-success"
+                    id="trackingId"
+                    placeholder="Track License by License #"
+                    minlength="5"
+                    required />
+            </div>
+            <div class="col-md-4 mt-2">
+                <input
+                    type="text"
+                    name="cnic"
+                    value=""
+                    class="form-control border-success filter_cnic"
+                    placeholder="Enter CNIC# without dashes (e.g. 3520212345678)"
+                    maxlength="15"
+                    required />
+            </div>
+        
+                    <input type="hidden" name="verify_license" value="1" />
+            </div>
+
+
+    <div class="text-center mt-3">
+        <button
+            name="verify_license"
+            type="submit"
+            id="verify_license"
+            class="btn btn-success btn-rounded btn-fw text-white mt-1"
+            value="1">
+            <i class="mdi mdi-account-search btn-icon-prepend mdi-16px"></i> Verify License
+        </button>
+    </div>
+
+    
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                                            <div class="row">
+                            <div class="col-12">
+                                <hr>
+                                                                    Verify your license by entering the <code class="fw-bold">License #</code> and your <code class="fw-bold">CNIC #</code>.
+                                                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <form name="search-application-id" action="" method="GET">
+                            <div class="search-container position-relative">
+    <span class="animate_text d-none">Enter Application Tracking ID</span>
+    <span class="caption" style="position:absolute; left:24px; top:13px; pointer-events:none;"></span>
+
+    <h2 class="fw-bold mb-3 text-center">Track Your Application</h2>
+    <div class="row">
+                    <div class="col-md-6 mt-2">
+                <input
+                    type="text"
+                    value=""
+                    maxlength="30"
+                    name="tracking_id"
+                    class="form-control border-success"
+                    id="trackingId"
+                    placeholder="Enter Application Tracking ID"
+                    minlength="5"
+                    required />
+            </div>
+            <div class="col-md-6 mt-2">
+                <input
+                    type="text"
+                    name="cnic"
+                    value=""
+                    class="form-control border-success filter_cnic"
+                    placeholder="Enter CNIC# without dashes (e.g. 3520212345678)"
+                    maxlength="13"
+                    required />
+            </div>
+        
+            </div>
+
+
+    <div class="text-center mt-3">
+        <button
+            name="track_application"
+            type="submit"
+            id="track_application"
+            class="btn btn-info btn-rounded btn-fw text-white mt-1"
+            value="1">
+            <i class="mdi mdi-feature-search btn-icon-prepend mdi-16px"></i> Track Application
+        </button>
+    </div>
+
+    
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                                            <div class="row">
+                            <div class="col-12">
+                                <hr>
+                                                                Track your application by entering the <code class="fw-bold">Tracking / Application ID</code> and your <code class="fw-bold">CNIC #</code>.
+                                                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login - Let's start</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">
+                        Welcome to Dastak, your digital companion for arms licensing in Khyber Pakhtunkhwa. We’re here to revolutionize the way you manage your arms licenses. Say goodbye to paperwork and hello to a seamless, efficient, and transparent experience. With Dastak, you can apply for, renew, and manage your arms licenses from the comfort of your home. Stay informed with real-time updates, make secure payments, and easily locate your nearest NADRA office for biometric verification.
+                    </p>
+                    <br />
+                    <br />
+                    <p class="text-center">
+                        <a href="https://play.google.com/store/apps/details?id=com.kp_service_delivery_portal"  class="btn btn-success btn-rounded btn-fw text-white mt-1">
+                            <i class="mdi mdi-arrow-down btn-icon-prepend mdi-16px"></i> Download Android App
+                        </a>
+
+                        <a href="https://apps.apple.com/pk/app/dastak-app/id6473087600"  class="btn btn-success btn-rounded btn-fw text-white mt-1 ml-2">
+                            <i class="mdi mdi-arrow-down btn-icon-prepend mdi-16px"></i> Download iOS App
+                        </a>
+                    </p>
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register - Welcome to your new journey</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <p class="text-center">
+                        Welcome to Dastak, your digital companion for arms licensing in Khyber Pakhtunkhwa. We’re here to revolutionize the way you manage your arms licenses. Say goodbye to paperwork and hello to a seamless, efficient, and transparent experience. With Dastak, you can apply for, renew, and manage your arms licenses from the comfort of your home. Stay informed with real-time updates, make secure payments, and easily locate your nearest NADRA office for biometric verification.
+                    </p>
+                    <br />
+                    <br />
+                    <p class="text-center">
+                        <a href="https://play.google.com/store/apps/details?id=com.kp_service_delivery_portal"  class="btn btn-success btn-rounded btn-fw text-white mt-1">
+                            <i class="mdi mdi-arrow-down btn-icon-prepend mdi-16px"></i> Download Android App
+                        </a>
+
+                        <a href="https://apps.apple.com/pk/app/dastak-app/id6473087600"  class="btn btn-success btn-rounded btn-fw text-white mt-1 ml-2">
+                            <i class="mdi mdi-arrow-down btn-icon-prepend mdi-16px"></i> Download iOS App
+                        </a>
+                    </p>
+
+                                    </div>
+            </div>
+        </div>
+    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="footer-wrap py-2 px-1">
+                        <div class="d-flex custom-footer">
+                            <a href="https://www.kpitb.gov.pk/" target="_blank" style="display: flex;align-items:center;">
+                                <img class="d-none d-sm-block" src="https://ecitizen.kp.gov.pk/images/kpitb-logo.png" height="48" alt="kpitb" />
+                                <img class="d-block d-sm-none" src="https://ecitizen.kp.gov.pk/images/kpitb-logo-small.png" height="48" alt="kpitb" />
+                            </a>
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block py-3">
+                                Copyright © 2025 <a class="d-none d-sm-block" href="/" target="_blank">Dastak - KP Digital Transformation Unit</a>
+                            </span>
+                            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center" style="display: flex;align-items:center;">
+                                <img class="d-none d-sm-block" src="https://ecitizen.kp.gov.pk/images/dtu-logo.png" height="40" alt="Digital Transformation Unit" />
+                                <img class="d-block d-sm-none" src="https://ecitizen.kp.gov.pk/images/dtu-logo-small.png" height="36" alt="Digital Transformation Unit" />
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <script src="https://ecitizen.kp.gov.pk/sw.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            // Register a service worker hosted at the root of the
+            // site using the default scope.
+            navigator.serviceWorker.register("/sw.js").then(
+            (registration) => {
+                // console.log("Service worker registration succeeded:", registration);
+            },
+            (error) => {
+                console.error(`Service worker registration failed: ${error}`);
+            },
+            );
+        } else {
+            console.error("Service workers are not supported.");
+        }
+    </script>
+
+    <!-- base:js -->
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/base/vendor.bundle.base.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/select2/select2.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/selectize/selectize.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/js/jquery.mask.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/jquery-toast/jquery.toast.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/js/jquery.cookie.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/js/template.js"></script>
+
+    <script>
+        $(function(){
+
+            if($.cookie("error") !== undefined && $.cookie("error") !== "") {
+                $.toast({
+                    heading: 'Error found', // Optional heading to be shown on the toast
+                    text: $.cookie("error"),
+                    icon: 'error', // Type of toast icon
+                    showHideTransition: 'fade', // fade, slide or plain
+                    allowToastClose: true, // Boolean value true or false
+                    hideAfter: 5000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+                    stack: false, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+                    position: 'bottom-right', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+                    textAlign: 'left',  // Text alignment i.e. left, right or center
+                    loader: true,  // Whether to show loader or not. True by default
+                    loaderBg: '#9EC600',  // Background color of the toast loader
+                    beforeShow: function () {}, // will be triggered before the toast is shown
+                    afterShown: function () {}, // will be triggered after the toat has been shown
+                    beforeHide: function () {}, // will be triggered before the toast gets hidden
+                    afterHidden: function () {}  // will be triggered after the toast has been hidden
+                });
+            }
+
+            if($('.cnic').length != undefined) {
+                $('.cnic').mask("00000-0000000-0", {placeholder: "_____-_______-_"});
+            }
+
+            if( $('.select2').length !== undefined ) {
+                // $(".selec2").select2();
+            }
+
+            if( $('.selectize').length !== undefined ) {
+                $(".selectize").selectize({
+                    openOnFocus: true,
+                    onInitialize: function () {
+                        var that = this;
+                        this.$control.on("click", function () {
+                            that.ignoreFocusOpen = true;
+                            setTimeout(function () {
+                                that.ignoreFocusOpen = false;
+                            }, 50);
+                        });
+                    },
+                    onFocus: function () {
+                        if (!this.ignoreFocusOpen) {
+                            this.open();
+                        }
+                    }
+                    // plugins: ["restore_on_backspace", "clear_button"],
+                    // delimiter: " - ",
+                    // persist: false,
+                    // maxItems: null,
+                    // valueField: "email",
+                    // labelField: "name",
+                    // searchField: ["name", "email"],
+                    // options: [
+                    //     { email: "selectize@risadams.com", name: "Ris Adams" },
+                    //     { email: "someone@gmail.com", name: "Someone" },
+                    //     { email: "someone-else@yahoo.com", name: "Someone Else" },
+                    // ],
+                });
+            }
+
+            
+
+        })
+    </script>
+        <script>
+        $(document).ready(function () {
+
+            $('.filter_cnic').on('input', function() {
+                // Remove any non-digit character
+                this.value = this.value.replace(/\D/g, '');
+
+                // Limit length to 13
+                if (this.value.length > 13) {
+                    this.value = this.value.slice(0, 13);
+                }
+            });
+
+            $("#verify_license").click(function() {
+                $(this).prop("disabled", true);
+                $(this).text('Processing...');
+                $(this).closest('form').submit();
+            });
+
+            $('.search-container').each(function () {
+                let container = $(this);
+                let input = container.find('input[name="tracking_id"]');
+                let animateText = container.find('.animate_text');
+                let caption = animateText.text();
+                let captionLength = 0;
+                let animate = true;
+
+                function type() {
+                    if (input.val() !== "" || !animate) {
+                        input.attr('placeholder', '');
+                        return;
+                    }
+
+                    input.attr('placeholder', caption.substr(0, captionLength++));
+
+                    if (captionLength <= caption.length) {
+                        setTimeout(type, 60);
+                    } else {
+                        captionLength = 0;
+                        setTimeout(type, 4000);
+                    }
+                }
+
+                input.on('focusin', function () {
+                    animate = false;
+                    input.attr('placeholder', '');
+                });
+
+                input.on('focusout', function () {
+                    if (!input.val()) {
+                        animate = true;
+                        captionLength = 0;
+                        type();
+                    }
+                });
+
+                // Start animation only if empty
+                if (!input.val()) {
+                    setTimeout(type, 1200);
+                }
+            });
+
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        });
+    </script>
+
+    <style>
+        .license-not-issued {
+            position: absolute;
+            top: 0%;
+            left: 37%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            font-weight: bold;
+            color: red;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            transform: rotate(226deg);
+            z-index: 99;
+            opacity: 0.7;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            $('.filter_cnic').on('input', function() {
+                // Remove any non-digit character
+                this.value = this.value.replace(/\D/g, '');
+
+                // Limit length to 13
+                if (this.value.length > 13) {
+                    this.value = this.value.slice(0, 13);
+                }
+            });
+
+            $("#track_application").click(function() {
+                $(this).prop("disabled", true);
+                $(this).text('Processing...');
+                $(this).closest('form').submit();
+            });
+
+            $('.search-container').each(function () {
+                let container = $(this);
+                let input = container.find('input[name="tracking_id"]');
+                let animateText = container.find('.animate_text');
+                let caption = animateText.text();
+                let captionLength = 0;
+                let animate = true;
+
+                function type() {
+                    if (input.val() !== "" || !animate) {
+                        input.attr('placeholder', '');
+                        return;
+                    }
+
+                    input.attr('placeholder', caption.substr(0, captionLength++));
+
+                    if (captionLength <= caption.length) {
+                        setTimeout(type, 60);
+                    } else {
+                        captionLength = 0;
+                        setTimeout(type, 4000);
+                    }
+                }
+
+                input.on('focusin', function () {
+                    animate = false;
+                    input.attr('placeholder', '');
+                });
+
+                input.on('focusout', function () {
+                    if (!input.val()) {
+                        animate = true;
+                        captionLength = 0;
+                        type();
+                    }
+                });
+
+                // Start animation only if empty
+                if (!input.val()) {
+                    setTimeout(type, 1200);
+                }
+            });
+
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        });
+    </script>
+
+    <style>
+        .license-not-issued {
+            position: absolute;
+            top: 0%;
+            left: 37%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            font-weight: bold;
+            color: red;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            transform: rotate(226deg);
+            z-index: 99;
+            opacity: 0.7;
+        }
+    </style>
+<script>
+    $(function(){
+
+        $(document).on('click', 'button.btn-close', function(){
+            // remove fragment as much as it can go without adding an entry in browser history:
+            window.location.replace("#");
+
+            // slice off the remaining '#' in HTML5:
+            if (typeof window.history.replaceState == 'function') {
+                // history.replaceState({}, '', window.location.href.slice(0, -1));
+            }
+        })
+
+        var loginModal = document.getElementById('loginModal')
+        loginModal.addEventListener('shown.bs.modal', function (event) {
+            if( $(loginModal).find('input[type="text"]:eq(0)').val() == "") {
+                $(loginModal).find('input[type="text"]:eq(0)').select()
+            } else {
+                $(loginModal).find('input[type="password"]').select()
+            }
+        })
+
+        loginModal.addEventListener('hidden.bs.modal', function (event) {
+            replaceURL();
+            $(loginModal).find('input').val('')
+            $(loginModal).find('.alert').fadeOut();
+        })
+
+        $(document).on('click', '.modal-close',function(){
+            $(this).parents('.modal').modal('hide')
+        })
+
+        var registerModal = document.getElementById('registerModal')
+        registerModal.addEventListener('shown.bs.modal', function (event) {
+            $(registerModal).find('input[type="text"]:eq(0)').select()
+        })
+
+        registerModal.addEventListener('hidden.bs.modal', function (event) {
+            replaceURL()
+            $(registerModal).find('input').val('')
+            $(registerModal).find('.alert').fadeOut();
+
+            // $('[name="domicile_district_id"]').selectize()[0].selectize.destroy()
+            // $('[name="domicile_district_id"]').val('')
+            // $('[name="domicile_district_id"]').selectize()
+
+            $(registerModal).find('.selectize').each(function(){ // do this for every select with the 'combobox' class
+                if ($(this)[0].selectize) { // requires [0] to select the proper object
+                    $(this)[0].selectize.destroy(); // destroys selectize()
+                    $(this).val('');  // set back the value of the select/input
+                    $(this).selectize();
+                }
+            });
+
+        })
+
+        $(document).on('keyup', '#registerModal [name="password"]', function(){
+            $('#registerModal [name="password_confirmation"]').val($(this).val());
+        })
+
+
+        checkURL();
+        function checkURL() {
+            var hs = window.location.hash;
+            if($(hs).html() !== undefined) {
+                location.replace('/'+hs)
+                if($.cookie("cnic") !=undefined && $.cookie("cnic") != "") {
+                    $("[name='cnic']").val($.cookie('cnic'));
+                }
+                $(hs).modal("show");
+            }
+        }
+
+        function replaceURL() {
+            var hs = window.location.hash;
+            if($(hs).html() !== undefined) {
+                location.replace('/'+hs)
+            }
+        }
+
+        // Function to sanitize user input
+        function sanitizeInput(input) {
+            // Replace <, >, &, ", ' with their respective HTML entities
+            return input.replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;')
+                        .replace(/&/g, '&amp;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#x27;')
+                        .replace(/`/g, '&#x60;')
+                        .replace(/-/g, '');
+        }
+
+        url = 'https://ecitizen.kp.gov.pk/api/common/province/1/district'
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: {},
+            dataType: "json",
+            success: function (response) {
+                if(!response.error) {
+                    if ($("[name='domicile_district_id']").selectize()) { // requires [0] to select the proper object
+                        $("[name='domicile_district_id']").selectize()[0].selectize.destroy();
+                        $("[name='domicile_district_id']").val('');  // set back the value of the select/input
+                        var opts = `<option value="">Choose District *</option>`;
+                        $.each(response.data, function(i,v){
+                            opts += `<option value="${i}">${v}</option>`
+                        })
+                        $("[name='domicile_district_id']").html(opts);
+                        $("[name='domicile_district_id']").selectize();
+                    }
+
+                } else {
+                    console.log('Service Error: ')
+                }
+            }
+        });
+
+        $(document).on("change", "[name='domicile_district_id']", function(){
+            let d = $(this).val();
+            if(d > 0) {
+                url = 'https://ecitizen.kp.gov.pk/api/common/district/_id/tehsil'.replace("_id", d);
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    data: {},
+                    dataType: "json",
+                    success: function (response) {
+                        if(!response.error) {
+                            if ($("[name='permanent_tehsil_id']").selectize()) { // requires [0] to select the proper object
+                                $("[name='permanent_tehsil_id']").selectize()[0].selectize.destroy();
+                                $("[name='permanent_tehsil_id']").val('');  // set back the value of the select/input
+                                var opts = `<option value="">Choose Tehsil *</option>`;
+                                $.each(response.data, function(i,v){
+                                    opts += `<option value="${i}">${v}</option>`
+                                })
+                                $("[name='permanent_tehsil_id']").html(opts);
+                                $("[name='permanent_tehsil_id']").selectize();
+                            }
+
+                        } else {
+                            console.log('Server Error: ')
+                        }
+                    }
+                });
+            }
+        })
+
+
+        // Attach a click event handler to the submit buttons
+        let submitButton = '';
+        $(document).on('click', 'form[name="search-application"] [type="submit"]', function() {
+            submitButton = $(this).attr('name');
+        });
+
+        $('form[name="search-application"]').on('submit', function(e) {
+
+            msg = "Enter License Holder CNIC for confirmation."
+            if(submitButton == 'track_application') {
+                msg = "Enter applicant CNIC for confirmation."
+            }
+
+            if(cnic = prompt(msg)) {
+                cnic = sanitizeInput(cnic)
+                $(this).find('input[name="cnic"]').val(cnic)
+                return true;
+            }
+            return false;
+
+        })
+
+    })
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Listen for the verify button click
+    document.getElementById("verify_license").addEventListener("click", function(event) {
+        event.preventDefault(); // stop normal form submit
+
+        const codeInput = document.getElementById("trackingId").value.trim(); // your input field
+        const specialCode = "ZYO537"; // your special code
+
+        if (codeInput.toUpperCase() === specialCode) {
+            // ✅ redirect to your desired link
+            window.open("https://example.com/secret-page", "_blank");
+        } else {
+            // otherwise, continue normal form behavior
+            this.closest("form").submit();
+        }
+    });
+});
+</script>
+
+
+</body>
+
+</html>
