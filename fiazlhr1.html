@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="umLAXkxZ8nii5kltpPN7zzj9xgaQDYOseuX4AEn9">
+    <meta name="api-token" content="1_eyJpdiI6IlZyWjdWNjVGaG9hazZwNUVQZXZpdmc9PSIsInZhbHVlIjoib0R0bEFVMStKekVqZE9CL0puOGZWVXRWOG9FcHA5RHIvVjlIUFFMcndEaz0iLCJtYWMiOiI5YTI2NWM0ZDcyZmE2ZDFjMjlkOGFmOGIzZmJlNDRiMmE1NTlkMDg1NGU3NTQ2ZGIyYjhlY2I5ZWQ1MGY4NjZjIiwidGFnIjoiIn0=">
+    <title>Dastak - Citizens platform</title>
+
+    <meta name="google" value="notranslate">
+
+    <!-- PWA  -->
+    <meta name="theme-color" content="#6777ef" />
+    <link rel="apple-touch-icon" href="https://ecitizen.kp.gov.pk/logo.png">
+    <link rel="manifest" href="https://ecitizen.kp.gov.pk/manifest.json">
+
+    <!-- base:css -->
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/base/vendor.bundle.base.css">
+    <!-- endinject -->
+
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/selectize/selectize.default.min.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/vendors/jquery-toast/jquery.toast.min.css">
+    <!-- End plugin css for this page -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/theme/css/style.css">
+    <link rel="stylesheet" href="https://ecitizen.kp.gov.pk/css/dastak.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="https://ecitizen.kp.gov.pk/images/favicon.ico" />
+
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .license-card {
+            width: 100%;
+            min-height: 450px;
+            margin: 0;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .columns-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .photo-column {
+            flex: 0 0 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .photo-column img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+        }
+
+        .profession-label {
+            margin-top: 20px;
+            font-weight: bolder;
+            font-size: 0.9rem;
+            color: #000b1a;
+            background: #ccd1d7;
+            padding: 10px 18px;
+            width: 100%;
+        }
+
+        .row {
+            margin-bottom: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #000b1a;
+            font-size: 0.9em;
+            margin-bottom: 7px;
+            text-decoration: underline;
+        }
+
+        .value {
+            font-size: 1em;
+            color: #000b1a;
+        }
+
+        .address-line {
+            margin-bottom: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .columns-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .photo-column {
+                order: -1;
+                margin-bottom: 15px;
+            }
+
+            .photo-column img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .license-card {
+                min-height: auto;
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin: 10px;
+            }
+
+            .license-card {
+                padding: 15px;
+            }
+
+            .photo-column img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profession-label {
+                font-size: 14px;
+            }
+
+            .label, .value {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-scroller">
+
+        <!-- partial:partials/_horizontal-navbar.html -->
+        <div class="horizontal-menu">
+            <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+                <div class="container-fluid">
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
+                        <ul class="navbar-nav navbar-nav-left">
+                            <li class="nav-item ms-0 me-5 d-lg-flex d-none">
+                                <a href="#" class="nav-link horizontal-nav-left-menu">
+                                    <img src="https://ecitizen.kp.gov.pk/images/kp-logo.png" alt="KP Logo" height="64" />
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown d-none">
+                                <a href="#" class="nav-link count-indicator "><i
+                                        class="mdi mdi-message-reply-text"></i></a>
+                            </li>
+                                                    </ul>
+                        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                            <a class="navbar-brand brand-logo" href="/">
+                                <img src="https://ecitizen.kp.gov.pk/images/logo-dastak.png" alt="logo" />
+                            </a>
+                            <a class="navbar-brand brand-logo-mini" href="/">
+                                <img src="https://ecitizen.kp.gov.pk/images/logo-dastak.png" alt="logo" /></a>
+                        </div>
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item nav-profile">
+                                                                
+                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper pb-1 pt-3">
+                    <div class="row">
+                        <div class="col-sm-6 mb-4 mb-xl-0">
+                            <div class="d-lg-flex align-items-center">
+                                <div>
+                                    <h3 class="text-dark font-weight-bold mb-2">Welcome! We're delighted to have you here!</h3>
+                                    <h5 class="font-weight-normal mb-2">
+                                        You are one step close to digital platform.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center justify-content-md-end">
+                                <div class="pe-1 mb-3 mb-xl-0">
+                                    <button type="button" class="btn btn-outline-inverse-info btn-icon-text">
+                                        Feedback
+                                        <i class="mdi mdi-message-outline btn-icon-append"></i>
+                                    </button>
+                                </div>
+                                <div class="pe-1 mb-3 mb-xl-0">
+                                    <button type="button" class="btn btn-outline-inverse-info btn-icon-text">
+                                        Help
+                                        <i class="mdi mdi-help-circle-outline btn-icon-append"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://ecitizen.kp.gov.pk" class="btn btn-sm btn-success">Back</a>
+    <div class="container-fluid mt-4">
+        <div class="row  justify-content-center ">
+            <div class="col-md-6">
+                <h2 class="mb-4 text-center">Applicant License Details</h2>
+                <div class="license-card">
+                    <div class="columns-container">
+                        <div class="photo-column">
+                            <img src="images/fiazlhr1.png" class="rounded-circle" alt="Applicant Photo">
+                            <div class="profession-label" style="font-size: 16px">
+                                Private
+                            </div>
+                        </div>
+
+                        
+                        <div class="column">
+                            <div class="row">
+                                <div class="label">Name</div>
+                                <div class="value">Zaid Ashiq</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Father Name</div>
+                                <div class="value">Muhammad Ashiq</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">CNIC</div>
+                                <div class="value">31102-5446852-7</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Current Address</div>
+                                <div class="value">
+                                    <div class="address-line">Po Aam Gah Koi Dara Teh. Ghazi Dist. Haripur <br /> Haripur / Khyber Pakhtunkhwa</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Permanent Address</div>
+                                <div class="value">
+                                    <div class="address-line">Satellite Town Lahore Cant <br /> Lahore / Punjab</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="column">
+                            <div class="row">
+                                <div class="label">License No</div>
+                                <div class="value">72620022</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Issue/Expiry</div>
+                                <div class="value">2025-10-30 <strong>To</strong> 2030-10-30</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Weapon No</div>
+                                <div class="value">ZYO537</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Weapon/Bore</div>
+                                <div class="value">Pistol (9MM)</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Restriction</div>
+                                <div class="value">Non-Prohibited</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Coverage</div>
+                                <div class="value">PROVINCIAL</div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Cartridges</div>
+                                <div class="value">100</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="footer-wrap py-2 px-1">
+                        <div class="d-flex custom-footer">
+                            <a href="https://www.kpitb.gov.pk/" target="_blank" style="display: flex;align-items:center;">
+                                <img class="d-none d-sm-block" src="https://ecitizen.kp.gov.pk/images/kpitb-logo.png" height="48" alt="kpitb" />
+                                <img class="d-block d-sm-none" src="https://ecitizen.kp.gov.pk/images/kpitb-logo-small.png" height="48" alt="kpitb" />
+                            </a>
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block py-3">
+                                Copyright © 2025 <a class="d-none d-sm-block" href="/" target="_blank">Dastak - KP Digital Transformation Unit</a>
+                            </span>
+                            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center" style="display: flex;align-items:center;">
+                                <img class="d-none d-sm-block" src="https://ecitizen.kp.gov.pk/images/dtu-logo.png" height="40" alt="Digital Transformation Unit" />
+                                <img class="d-block d-sm-none" src="https://ecitizen.kp.gov.pk/images/dtu-logo-small.png" height="36" alt="Digital Transformation Unit" />
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <script src="https://ecitizen.kp.gov.pk/sw.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            // Register a service worker hosted at the root of the
+            // site using the default scope.
+            navigator.serviceWorker.register("/sw.js").then(
+            (registration) => {
+                // console.log("Service worker registration succeeded:", registration);
+            },
+            (error) => {
+                console.error(`Service worker registration failed: ${error}`);
+            },
+            );
+        } else {
+            console.error("Service workers are not supported.");
+        }
+    </script>
+
+    <!-- base:js -->
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/base/vendor.bundle.base.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/select2/select2.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/selectize/selectize.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/js/jquery.mask.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/vendors/jquery-toast/jquery.toast.min.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/js/jquery.cookie.js"></script>
+    <script src="https://ecitizen.kp.gov.pk/theme/js/template.js"></script>
+
+    <script>
+        $(function(){
+
+            if($.cookie("error") !== undefined && $.cookie("error") !== "") {
+                $.toast({
+                    heading: 'Error found', // Optional heading to be shown on the toast
+                    text: $.cookie("error"),
+                    icon: 'error', // Type of toast icon
+                    showHideTransition: 'fade', // fade, slide or plain
+                    allowToastClose: true, // Boolean value true or false
+                    hideAfter: 5000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+                    stack: false, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+                    position: 'bottom-right', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+                    textAlign: 'left',  // Text alignment i.e. left, right or center
+                    loader: true,  // Whether to show loader or not. True by default
+                    loaderBg: '#9EC600',  // Background color of the toast loader
+                    beforeShow: function () {}, // will be triggered before the toast is shown
+                    afterShown: function () {}, // will be triggered after the toat has been shown
+                    beforeHide: function () {}, // will be triggered before the toast gets hidden
+                    afterHidden: function () {}  // will be triggered after the toast has been hidden
+                });
+            }
+
+            if($('.cnic').length != undefined) {
+                $('.cnic').mask("00000-0000000-0", {placeholder: "_____-_______-_"});
+            }
+
+            if( $('.select2').length !== undefined ) {
+                // $(".selec2").select2();
+            }
+
+            if( $('.selectize').length !== undefined ) {
+                $(".selectize").selectize({
+                    openOnFocus: true,
+                    onInitialize: function () {
+                        var that = this;
+                        this.$control.on("click", function () {
+                            that.ignoreFocusOpen = true;
+                            setTimeout(function () {
+                                that.ignoreFocusOpen = false;
+                            }, 50);
+                        });
+                    },
+                    onFocus: function () {
+                        if (!this.ignoreFocusOpen) {
+                            this.open();
+                        }
+                    }
+                    // plugins: ["restore_on_backspace", "clear_button"],
+                    // delimiter: " - ",
+                    // persist: false,
+                    // maxItems: null,
+                    // valueField: "email",
+                    // labelField: "name",
+                    // searchField: ["name", "email"],
+                    // options: [
+                    //     { email: "selectize@risadams.com", name: "Ris Adams" },
+                    //     { email: "someone@gmail.com", name: "Someone" },
+                    //     { email: "someone-else@yahoo.com", name: "Someone Else" },
+                    // ],
+                });
+            }
+
+            
+
+        })
+    </script>
+    
+</body>
+
+</html>
